@@ -1,26 +1,51 @@
-# See http://help.github.com/ignore-files/ for more about ignoring files.
-
-# Compiled output
-/dist
-/tmp
-/out-tsc
-/bazel-out
+# Rust - Cargo
+/target/
+Cargo.lock
+**/*.rs.bk
+*.pdb
 
 # Node
-/node_modules
-npm-debug.log
-yarn-error.log
+node_modules/
+npm-debug.log*
 
-# IDEs and editors
+# Angular
+/dist/
+/tmp/
+/out-tsc/
+/bazel-out/
+.angular/
+.sass-cache/
+connect.lock
+coverage/
+libpeerconnection.log
+testem.log
+typings/
+
+# Testing
+# Vitest
+__tests__/*.js
+*.spec.js
+html/
+.vitest/
+.vite/
+vitest.config.ts.timestamp-*
+
+# Stryker
+.stryker-tmp/
+reports/
+stryker-tmp/
+.stryker-output/
+mutation-report.html
+
+# IDEs and editors - JetBrains
 .idea/
-.project
-.classpath
-.c9/
-*.launch
-.settings/
-*.sublime-workspace
+*.iml
+*.iws
+*.ipr
+.idea_modules/
+out/
 
-# Visual Studio Code
+# IDEs and editors - VSCode
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
@@ -28,15 +53,55 @@ yarn-error.log
 !.vscode/extensions.json
 .history/*
 
-# Miscellaneous
-/.angular/cache
-.sass-cache/
-/connect.lock
-/coverage
-/libpeerconnection.log
-testem.log
-/typings
-
-# System files
+# System Files
 .DS_Store
 Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Tauri
+/src-tauri/target/
+/src-tauri/WixTools
+/src-tauri/Cargo.lock
+/src-tauri/icons/*
+!/src-tauri/icons/icon.*
+
+# Compiled output
+/dist
+/tmp
+/out-tsc
+/bazel-out
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Logs
+logs
+*.log
+
+# Tests
+/coverage
+/.nyc_output
+/reports
+.coverage
+coverage-final.json
+stryker.log
+
+# Misc
+/.sass-cache
+/connect.lock
+/libpeerconnection.log
+/typings
+*.tsbuildinfo
+
+# Build files
+*.js.map
+*.css.map
+*.sass.map
+*.scss.map
+
+# Generated files
+generated/
+src/assets/version.json
